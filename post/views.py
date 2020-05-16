@@ -33,7 +33,7 @@ class NewPostView(generic.FormView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['stripe_key'] = settings.STRIPE_TEST_PUBLISHABLE_KEY # private key
+        context['stripe_key'] = settings.STRIPE_TEST_PUBLISHABLE_KEY # local key
         # context['stripe_key'] = settings.STRIPE_PUBLISHABLE_KEY # production key
         return context
 
