@@ -13,5 +13,6 @@ These branches will _not be deleted_, this is to preserve the code used in each 
 These are published to my publication [here](https://medium.com/matthew-wimb). This project is subject to changes as it is integrated into articles.
 * [Deploying a dockerized cookiecutter-django project to DigitalOcean](https://medium.com/matthew-wimb/a-full-deployment-of-cookiecutter-django-on-digitalocean-with-docker-5293f31a1fdc)
 * [Removing cookiecutter-django users while maintaining admin urls](https://medium.com/matthew-wimb/removing-cookiecutter-django-users-while-maintaining-admin-urls-f1bb5f0cb6b3)
+* [Integrating Stripe with cookiecutter-django using Class Based Views]()
 
 :License: MIT
