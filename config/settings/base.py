@@ -73,6 +73,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "cookiecutter_example.users.apps.UsersConfig",
     # Your stuff: custom apps go here
+    "post.apps.PostConfig", # post application
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

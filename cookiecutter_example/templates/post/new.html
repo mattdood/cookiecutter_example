@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% load crispy_forms_tags %}
+
+{% block head %}
+<script src="https://js.stripe.com/v3/"></script>
+
+{% endblock head %}
+
+{% block content %}
+<div class="row justify-content-md-center">
+  <div class="col-md-6">
+    <form action="" method="post" enctype="multipart/form-data" id="payment-form">
+      {% csrf_token %}
+      {{ form.media }}
+      <div class="form-group">
+        <label class="font-weight-bold" for="jobBasics">Post:</label>
+        {{ form.title|as_crispy_field }}
+        {{ form.author|as_crispy_field }}
+        {{ form.body|as_crispy_field }}
+      </div>
+      <div class="form-group">
+          <label class="font-weight-bold" for="personal_info">Personal Info</label>
+        {{ form.email|as_crispy_field }}
+        {{ form.address|as_crispy_field }}
+      </div>
+      <div class="row form-group ">
+        <div class=" mx-auto text-center"><label class="font-weight-bold" for="submit">Payment
+            Information:</label></div>
+        <div class="col">
+          <label for="card-element">
+            Credit or debit card
+          </label>
+          <div id="card-element" style="width: 400px;">
+            <!-- A Stripe Element will be inserted here. -->
+          </div>
+
+          <!-- Used to display form errors. -->
+          <div id="card-errors" role="alert"></div>
+        </div>
+        <div class="col">
+          <br>
+          <button onclick="clicked(event);" class="btn btn-success font-weight-bold" type="submit">$<s
+              class="font-weight-bold">200</s>
+            Post</button>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock content %}
+
+{% block javascript %}
+<script src="{% static 'js/client.js' %}"></script>
+<script type="text/javascript">
+  function clicked(e) {
+    if (!confirm('Are you sure?')) e.preventDefault();
+  }
+</script>
+{% endblock javascript %}

@@ -16,6 +16,7 @@ urlpatterns = [
     # path("users/", include("cookiecutter_example.users.urls", namespace="users")),
     # path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path("post/", include("post.urls")), # post application URLS
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
