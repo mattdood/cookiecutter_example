@@ -1,7 +1,7 @@
 # import settings for stripe API keys call
 from django.conf import settings
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # importing generic for class based views
 from django.views import generic
