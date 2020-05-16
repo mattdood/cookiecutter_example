@@ -2,3 +2,8 @@
 # ------------------------------------------------------------------------------
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
+
+# Stripe
+# ------------------------------------------------------------------------------
+STRIPE_TEST_PUBLISHABLE_KEY=pk_test_ZJhLN7j6rpVW7Dm5ObPKp2fa00ecdHXPQD
+STRIPE_TEST_SECRET_KEY=sk_test_cwtTETcII0qhvFwCBlndhv4H00EWYXlQLY

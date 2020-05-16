@@ -275,4 +275,4 @@ cookiecutter_example/media/
 .ipython/
 .env
 .envs/*
-!.envs/.local/
+.envs/.local/*
